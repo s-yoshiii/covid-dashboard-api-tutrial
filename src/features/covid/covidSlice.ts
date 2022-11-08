@@ -22,3 +22,20 @@ export const fetchAsyncGetDaily = createAsyncThunk(
     return { data: data, country: country };
   }
 );
+const covidSlice = createSlice({
+  name: "covid",
+  initialState: initialState,
+  reducers: {},
+  extraReducers: (builder) => {
+    builder.addCase(fetchAsyncGetDaily.fulfilled, (state, action) => {
+      return {
+        ...state,
+        daily: action.payload.data,
+        country: action.payload.country,
+      };
+    });
+  },
+});
+export const selectDaily = (state: RootState) => state.covid.daily;
+export const selectCountry = (state: RootState) => state.covid.country;
+export default covidSlice.reducer;
