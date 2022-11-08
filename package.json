@@ -45,6 +45,8 @@
   },
   "devDependencies": {
     "@testing-library/react": "^12.1.5",
-    "@types/react": "^17.0.4"
+    "@types/react": "^17.0.4",
+    "react-countup": "^6.3.2",
+    "react-icons": "^4.6.0"
   }
 }
