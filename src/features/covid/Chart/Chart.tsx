@@ -8,7 +8,6 @@ import { selectDaily } from "../covidSlice";
 const Chart: FC = () => {
   const daily = useSelector(selectDaily);
   const dates = daily.map(({ Date }) => Date);
-  console.log(dates);
   const lineChart = daily[0] && (
     <Line
       data={{
