@@ -17,20 +17,18 @@ const SwitchCountry: FC = () => {
   const dispatch = useAppDispatch();
   const countries = [
     "japan",
-    "china",
     "us",
+    "germany",
+    "india",
     "france",
     "italy",
     "spain",
-    "united kingdom",
-    "germany",
     "russia",
     "brazil",
     "taiwan",
     "thailand",
     "new zealand",
     "sweden",
-    "india",
   ];
   return (
     <FormControl className={classes.formControl}>
